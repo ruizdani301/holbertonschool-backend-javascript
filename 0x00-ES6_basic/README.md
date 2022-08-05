@@ -1,12 +1,4 @@
-0x00. ES6 Basics
-
- By Johann Kerbrat, Engineering Manager at Uber Works
- Weight: 1
- Ongoing project - started Jul 25, 2022, must end by Jul 26, 2022 - you're done with 0% of tasks.
- Checker will be released at Jul 25, 2022 12:00 PM
- An auto review will be launched at the deadline
-Concepts
-For this project, we expect you to look at these concepts:
+<h1>0x00. ES6 Basics</h1>
 
 Modern Javascript
 Software Linter
@@ -60,12 +52,5 @@ in your project directory:
 Install Jest using: npm install --save-dev jest
 Install Babel using: npm install --save-dev babel-jest @babel/core @babel/preset-env
 Install ESLint using: npm install --save-dev eslint
-Configuration files
-package.json
-Click to show/hide file contents
-babel.config.js
-Click to show/hide file contents
-.eslintrc.js
-Click to show/hide file contents
-Finally…
+
 Don’t forget to run npm install from the terminal of your project folder to install all necessary project dependencies.
