@@ -1,20 +1,49 @@
 interface DirectorInterface {
     
-     workFromHome(): String
-     getCoffeeBreak(): String
-     workDirectorTasks(): String 
+     workFromHome(): string
+     getCoffeeBreak(): string
+     workDirectorTasks(): string 
 }
 
 interface TeacherInterface{
-    workFromHome(): String
-    getCoffeeBreak(): String
-    workDirectorTasks(): String
+    workFromHome(): string
+    getCoffeeBreak(): string
+    workTeacherTasks(): string
 
 }
-/*
+
 class Director implements DirectorInterface{
     
-    function workFromHome(){return "Working from home"};
-    
+    workFromHome(){
+        return "Working from home"
+    };
+    getCoffeeBreak()
+    {
+        return "Getting a coffe break"
+    };
+    workDirectorTasks(){
+        return "Getting to director tasks"
+    }
 }
-*/
+
+class Teacher implements TeacherInterface{
+    
+    workFromHome(){
+        return "Cannot work from home"
+    };
+    getCoffeeBreak()
+    {
+        return "Cannot have a break"
+    };
+    workTeacherTasks(){
+        return "Getting to work"
+    }
+}
+
+function createEmployee (salary: any){
+    if(typeof(salary === "number" && salary < 500)){
+        return new Teacher();
+    }
+    else { return new Director();}
+}
+console.log(createEmployee(600));

@@ -1,7 +1,7 @@
 // task-1 Let's build a Teacher interface
 interface Teacher {
-    firstName: string;
-    lastName: string;
+    readonly firstName: string;
+    readonly lastName: string;
     fullTimeEmployee: boolean;
     yearsOfExperience?: number;
     location: string;
@@ -9,10 +9,7 @@ interface Teacher {
   }
 
   // task-2 2. Extending the Teacher class
-  //class Teacher {
-  //  constructor(fullTimeEmployee, location)
-    
-  //  }
+  
   
   interface Directors extends Teacher{
     numberOfReports: number
@@ -28,26 +25,32 @@ interface Teacher {
     siglas = datos.firstName.slice(0, 1); 
     return `${siglas}.${datos.lastName}`
 }
-
+// punto 4
 interface student{
-  name: String
-  last: String
-  workOnHomework: String
-  displayName: String
+  name: string
+  last: string
+  workOnHomework(): string
+  displayName(): string
 }
 
 class studentClass implements student{
-  name: string
-  last: string
+  public name: string
+  public last: string
 
-  constructor(firstName: string, lastName: string){
-    this.name = firstName
-    this.last = lastName
+  constructor(param1: string, param2: string){
+    this.name = param1
+    this.last = param2
   }
-  get workOnHomework(){
-    return `Currently working`;
+  public workOnHomework(): string{
+    return "Currently working";
   }
-  get displayName(){
+  public displayName(): string{
     return this.name;
   }
 }
+
+//test
+const student: studentClass = new studentClass("Jhon", "Doe");
+console.log(
+  `${student.name} ${student.last} ${student.workOnHomework()}`
+);
