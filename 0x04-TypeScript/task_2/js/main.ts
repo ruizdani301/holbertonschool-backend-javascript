@@ -52,3 +52,18 @@ function createEmployee (salary:number | string): Teacher | Director{
 //console.log(createEmployee(200));
 //console.log(createEmployee("hola"));
 
+// task 6
+function isDirector (employee:Teacher | Director): employee is Director{
+    
+     return employee instanceof Director;
+}
+
+// task 7
+
+type Subjects = "Math" | "History"
+
+function teachClass(todayClass: Subjects){
+    return `teaching ${todayClass}`;
+}
+console.log(teachClass("Math"));
+console.log(teachClass("History"));
